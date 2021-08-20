@@ -1,0 +1,659 @@
+/*============================ Global Styles ===================*/
+@import './fonts.css'; 
+
+dl, ol, ul {
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+html[lang="ka"] *:lang(ka) {
+    font-family: 'BPG Mrgvlovani';
+    font-size: 14px;
+}
+html[lang="ru"] *,
+html[lang="en"] * {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
+}
+html[lang="ru"] .desktop-menu__link,
+html[lang="en"] .desktop-menu__link {
+    text-transform: capitalize;
+}
+html[lang="ru"] .mobile-menu__link,
+html[lang="en"] .mobile-menu__link {
+    text-transform: capitalize;
+    padding: 15px 0;
+    display: block;
+}
+html[lang="ru"] .owl-slider__price-text,
+html[lang="en"] .owl-slider__price-text {
+    text-transform: capitalize;
+    padding: 0;
+}
+html[lang="ru"] .welcome-text__title,
+html[lang="en"] .welcome-text__title {
+    text-transform: capitalize;
+    padding: 50px 0 20px;
+}
+html[lang="ru"] .products__category,
+html[lang="en"] .products__category {
+    background-color: rgba(0,0,0,.03);
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-top: 14px;
+}
+html[lang="ru"] .list-group-item,
+html[lang="en"] .list-group-item {
+    text-transform: capitalize;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 5px 8px 17.5px;
+}
+html[lang="ru"] .product-gallery__list-item:not(:first-child),
+html[lang="en"] .product-gallery__list-item:not(:first-child) {
+    color: #6c757d;
+    padding: 10px 0;
+    border-bottom: 1px solid #6c757d;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+html[lang="ru"] a.color-white,
+html[lang="en"] a.color-white {
+    text-transform: uppercase;
+    color: #fff !important;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    font-size: 16px !important;
+}
+html[lang="ru"] #textarea .contact__placeholder-wrapper--label,
+html[lang="en"] #textarea .contact__placeholder-wrapper--label {
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    transform: translateY(-50%);
+    text-transform: capitalize;
+    font-size: 12px;
+    margin: 0;
+    display: block;
+    transition: all .3s;
+}
+html[lang="ru"] .btn.btn-secondary,
+html[lang="en"] .btn.btn-secondary {
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 15px 30px 12px;
+}
+html[lang="ru"] h2.footer__title,
+html[lang="en"] h2.footer__title {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/*=========================== End Globals ======================*/
+header.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #fff;
+    box-shadow: 0 3px 3px rgba(0,0,0, .3);
+}
+/*===================== Desktop Menu Styles ====================*/
+.desktop-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.desktop-menu__logo-link {
+    width: 150px;
+}
+.desktop-menu__logo {
+    width: 100%;
+}
+.desktop-menu__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.desktop-menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+.desktop-menu__list-item {
+    padding: 6px 10px 3px;
+    transition: all .3s;
+    margin-right: 20px;
+}
+.desktop-menu__list-item:last-child {
+    margin-right: 0;
+}
+.desktop-menu__list-item.list-item-active,
+.desktop-menu__list-item:hover {
+    box-shadow: 0 0 10px rgba(0,0,0, .5);
+}
+.desktop-menu__link {
+    font-family: 'BPG Mrgvlovani Caps';
+}
+/*======================= Mobile menu =======================*/
+.mobile-menu-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0, .2);
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.mobile-menu-button--icon {
+    color: #fff;
+    font-size: 20px;
+}
+.mobile-menu {
+    position: fixed;
+    width: 80%;
+    height: calc(100vh - 70px);
+    background-color: #fff;
+    box-shadow: -3px 3px 3px rgba(0,0,0, .3);
+    z-index: 15;
+    right: -100%;
+    top: 70px;
+    transition: right .5s;
+}
+.mobile-menu.active-mobile-menu {
+    right: 0;
+}
+.mobile-menu__nav {}
+.mobile-menu__list {
+    padding: 30px 0 0 30px;
+}
+.mobile-menu__list-item:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0, .05);
+}
+.mobile-menu__link-icon {
+    margin-right: 10px;
+}
+.mobile-menu__link {
+    font-family: 'BPG Mrgvlovani Caps';
+    padding: 15px 0;
+    display: block;
+}
+.mobile-menu__lang {
+    background-color: rgba(0,0,0, .03);
+    padding: 20px 0 20px 30px;
+}
+.mobile-menu__lang-item:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0, .05);
+}
+.mobile-menu__lang-link {
+    padding: 10px 0;
+    display: block;
+}
+.mobile-menu__lang-icon {
+    margin-right: 10px;
+}
+/*================== Language Flags =========================*/
+.desktop-menu__lang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.desktop-menu__lang-item {
+    margin-right: 10px;
+    transition: all .3s;
+    padding: 5px 5px;
+}
+.desktop-menu__lang-item:last-child {
+    margin-right: 0;
+}
+/*=========== ჯავასკრიპტით ===============*/
+.desktop-menu__lang-item.lang-item-active,
+.desktop-menu__lang-item:hover {
+    transform: scale(1.01);
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0,0,0, .5);
+}
+/*=========== ჯავასკრიპტით ===============*/
+.desktop-menu__lang-icon {
+    display: block;
+    width: 21px;
+    height: 17px;
+}
+/*============================ Main-Owl-Carousel ==============*/
+.owl-slider {
+    padding: 10px 0;
+    position: relative;
+}
+.owl-slider__info {
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    padding: 30px;
+    background-color: rgba(255,255,255, .8);
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0,0,0, .3);
+}
+.owl-slider__price {
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    padding: 40px 30px 20px;
+    background-color: rgba(255,255,255, .8);
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0,0,0, .3);
+}
+.owl-slider__price-text {
+    font-family: 'BPG Mrgvlovani Caps';
+    padding: 0;
+}
+.owl-slider__price-number {
+    color: rgb(46, 46, 216);
+}
+.owl-slider__contact {
+    font-size: 24px;
+    font-weight: bold;
+}
+.main-owl-carousel__item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+}
+.mobile-slider-version {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: calc( 100vh - 58px );
+    background-image: url(../img/mobile-bentley.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/*============================ Welcome Text ====================*/
+main {
+    padding: 0 0 30px;
+    margin-top: 58px;
+}
+.welcome-text {
+    box-shadow: 0 -3px 3px rgba(0,0,0, .3);
+}
+.welcome-text__title {
+    font-family: 'BPG Mrgvlovani Caps';
+    padding: 50px 0 20px;
+}
+.welcome-text__text {
+    line-height: 24px;
+}
+.welcome-text__text > a.welcome-text__link {
+    padding: 2px 4px 1px;
+    background-color: rgba(0,0,0, .1);
+    border-radius: 2px;
+    transition: all .2s;
+}
+.welcome-text__text > a.welcome-text__link:hover {
+    color: rgb(62, 62, 250) !important;
+    background-color: initial;
+    box-shadow: 0 0 5px rgba(0,0,0, .5);
+}
+/*============================ Products ===========================*/
+.products__category {
+    background-color: rgba(0,0,0,.03);
+    padding: 10px 10px 6px;
+    font-family: 'BPG Mrgvlovani Caps';
+    font-size: 14px;
+    margin-top: 14px;
+}
+.card {
+    box-shadow: 0 0 5px rgba(0,0,0, .5);
+}
+.card-img-top {
+    transition: transform .2s;
+}
+.card:hover .card-img-top {
+    transform: scale(.95);
+}
+.list-group-item {
+    font-family: 'BPG Mrgvlovani Caps';
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 5px 6px 17.5px;
+}
+.list-group-item--info {
+    padding: 2px 6px 0px;
+    border-radius: 2px;
+    background-color: rgba(0,0,0, .05);
+}
+
+/*============================ Product Page========================*/
+.jumbotron {
+    margin: 0;
+    background-color: initial;
+    background-image: url(../img/2000x200-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.display-4 {
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+}
+.breadcrumb-color {
+    background-color: #e9ecef;
+}
+.breadcrumb {
+    margin: 0;
+    text-transform: capitalize;
+}
+.product-gallery__title {
+    font-size: 24px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 40px 0;
+    color: #6c757d;
+}
+.list-item--header {
+    text-align: center;
+    text-transform: capitalize;
+    padding:  10px 0;
+    background-color: rgba(0,0,0, .03);
+    margin-bottom: 10px;
+}
+.product-gallery__list-item:not(:first-child) {
+    color: #6c757d;
+    padding: 10px 0;
+    border-bottom: 1px solid #6c757d;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'BPG Mrgvlovani Caps';
+    font-size: 12px;
+}
+.product-gallery .card {
+    box-shadow: initial;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.product-gallery .card:hover .card-img-top {
+    transform: scale(1.02);
+}
+a.color-white {
+    font-family: 'BPG Mrgvlovani Caps';
+    color: #fff !important;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    font-size: 16px !important;
+}
+/*============================ Terms ==============================*/
+.terms {
+    margin: 0 auto;
+    padding: 20px 10px;
+    font-size: 90%;
+}
+.terms_table td {
+    vertical-align: top;
+    line-height: 20px;
+    padding: 10px;
+    letter-spacing: 1px;
+}
+.terms_td_header {
+    text-transform: uppercase;
+    font-size: 110%;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+    color: gray;
+}
+
+/*============================ Contact ============================*/
+.section-contact {
+    padding: 0 0 30px;
+}
+.contact {
+    display: block;
+    background: rgba(0,0,0,.03);
+    padding: 30px 20px 0;
+    margin-top: 30px;
+    height: 100%;
+}
+.contact__placeholder-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+.contact__placeholder-wrapper--label {
+    position: absolute;
+    top: 35%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-family: 'BPG Mrgvlovani Caps' !important;
+    text-transform: capitalize;
+    font-size: 12px !important;
+    margin: 0;
+    display: block;
+    transition: all .3s;
+}
+input:focus, 
+textarea:focus {
+    outline: none;
+}
+input, 
+textarea {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: block;
+    font-size: 12px !important;
+    width: 100%;
+}
+.contact__placeholder-wrapper--textarea {
+    padding: 5px 0 0 10px;
+}
+.contact__placeholder-wrapper--textarea + .contact__placeholder-wrapper--label {
+    top: 10%;
+}
+.contact__placeholder-wrapper--textarea.active-input + .contact__placeholder-wrapper--label {
+    top: -10px;
+    font-size: 10px !important;
+}
+.contact__placeholder-wrapper--input {
+    height: 40px;
+    padding: 0 0 0 10px;
+}
+.contact__placeholder-wrapper--input.active-input + .contact__placeholder-wrapper--label {
+    top: -10px;
+    font-size: 10px !important;
+}
+.error-message--wrapper {
+    height: 30px;
+    padding: 10px 0 5px 10px;
+}
+.contact__placeholder-wrapper--error-message {
+    display: none;
+    color: red;
+    font-size: 11px !important;
+}
+.btn.btn-secondary {
+    font-family: 'BPG Mrgvlovani Caps';
+    font-size: 12px;
+    padding: 15px 30px 12px;
+}
+.contact__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+.contact__icon {
+    font-size: 20px;
+}
+.contact__link {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.map {
+    width: 100%;
+    height: 300px;
+}
+/*============================ End Contact ========================*/
+/*============================ footer =============================*/
+/*============================ footer =============================*/
+.footer {
+    padding: 50px 0 0;
+    background-color: rgba(0,0,0, .1);
+}
+h2.footer__title {
+    font-family: 'BPG Mrgvlovani Caps';
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.footer__info-box {
+    display: flex;
+    align-items: center;
+}
+.footer__info-box:not(:last-child) {
+    margin-bottom: 10px;
+}
+.footer__info-box-icon-wrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__info-box--icon {
+    color: rgb(122, 121, 121);
+    font-size: 16px;
+}
+.footer__info-box--text {
+    font-size: 16px;
+    margin: 0 0 0 10px;
+}
+.footer__brand-name {
+    font-size: 16px;
+    letter-spacing: .5px;
+    margin-top: 20px;
+    text-align: center;
+    background: rgba(0,0,0, .1);
+    padding: 20px 0;
+}
+/*============================== Responsive =========================================================*/
+/*============================== Responsive =========================================================*/
+/*============================== Responsive =========================================================*/
+/*============================== Responsive =========================================================*/
+/*============================== Responsive =========================================================*/
+@media screen and (max-width: 991px) {
+    .desktop-menu__navigation {
+        display: none;
+    }
+    .mobile-menu-button {
+        display: flex;
+    }
+    .owl-slider__info {
+        bottom: 10px;
+        right: 10px;
+        padding: 20px 20px 10px;
+    }
+    .owl-slider__price {
+        top: 10px;
+        left: 10px;
+        padding: 30px 20px 20px;
+    }
+    .owl-slider__price-text {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .owl-slider__price-number {
+        font-size: 14px;
+    }
+    .owl-slider__contact {
+        font-size: 12px;
+    }
+    .footer__title {
+        padding-top: 20px;
+    }
+    /*======================= Product Page ===================*/
+    .display-4 {
+        font-size: 20px;
+    }
+    .product-gallery__title {
+        font-size: 22px;
+    }
+}
+
+@media screen and ( max-width: 768px ) {
+    .owl-slider {
+        display: none;
+    }
+    .mobile-slider-version {
+        display: block;
+    }
+    .desktop-menu {
+        padding: 10px 0;
+    }
+    .desktop-menu__logo-link {
+        width: 100px;
+    }
+    .mobile-menu {
+        height: calc(100vh - 60px);
+        top: 60px;
+    }
+    .terms {
+        padding: 10px 5px;
+        font-size: 70%;
+    }
+    .terms_table td {
+        line-height: 20px;
+        padding: 10px;
+        letter-spacing: .5px;
+    }
+    .terms_td_header {
+        font-size: 90%;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .owl-slider__price {
+        width: 90%;
+        padding: 30px 20px 20px;
+    }
+    .terms {
+        font-size: 50% !important;
+    }
+    .terms_td_header {
+        font-size: 70%;
+    }
+}
+@media screen and (orientation: landscape) and (max-height: 460px) {
+    .mobile-menu__list {
+        padding: 10px 0 0 30px;
+    }
+    .mobile-menu__lang {
+        padding: 10px 0 10px 30px;
+    }
+    .mobile-menu__link {
+        padding: 5px 0;
+    }
+    .mobile-menu__lang-link {
+        padding: 5px 0;
+    }
+}
